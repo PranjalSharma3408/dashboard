@@ -1,0 +1,75 @@
+{% include 'header.html' %}
+
+<table border="0" width="100%">
+<tr style="background-color:#cccccc; height: 40px;">
+  <td colspan="2">Manage Users</td>
+</tr>
+<tr>
+  <td width="5%">&nbsp;</td>
+  <td>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New</button>
+  </td>
+</tr>
+</table>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+            <div class="modal-header_new">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Add/Edit User</h4>
+            </div>
+            <div class="modal-body_new">
+                                        <form enctype="multipart/form-data" name="country_form" id="country_form">
+   <table width="100%" border="0">
+  <tr>
+    <td height="42" colspan="4" bgcolor="#CCCCCC"><strong>&nbsp;User Details</strong></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="22%"><div align="right"><strong>Person Name &nbsp;</strong></div></td>
+    <td width="18%"><label>
+        <input type="text" name="admin_name" id="admin_name" />
+        <input type="hidden" name="admin_id_h" id="admin_id_h"  value="-1"/>
+    </label></td>
+    <td><div align="right"><strong>User  Name&nbsp;</strong></div></td>
+    <td><label>
+      <input type="text" name=user_name" id="user_name" />
+    </label></td>
+  </tr>
+   <tr>
+        <td width="22%"><div align="right"><strong>Password &nbsp;</strong></div></td>
+    <td width="18%"><label>
+        <input type="text" name="pass" id="pass" />
+    </label></td>
+       <td width="22%">&nbsp;</td>
+    <td width="18%">&nbsp;</td>
+   </tr>
+</table>
+    </form>
+            </div>
+            <div class="modal-footer_new">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="subm">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+  $("#add_new").click(function()
+  {
+       $("#myModal").modal({
+						  backdrop: 'static',
+						  keyboard: false
+				 });
+  });
+</script>

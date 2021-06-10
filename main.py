@@ -19,18 +19,11 @@ def main_dashboard():
 
 @app.route('/user_master')
 def main_user():
-    """Entry point; the view for the main page"""
-    return render_template('user_master.html')
+    g=True
 
+"""Entry point; the view for the main page"""
 if __name__ == "__main__":
-    app.run(host="localhost", port=8000, debug=True)
-
-
-
-
-
-
-
+    app.run(host="localhost", port=8000)
 
 
 
